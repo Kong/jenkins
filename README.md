@@ -1,3 +1,3 @@
 # Jenkins
 
-Dockerfiles to slap the AWS CLI on to of a jenkins and a ofelia docker image
+Dockerfiles that add the AWS CLI on to of a jenkins and a ofelia docker image
