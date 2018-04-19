@@ -13,5 +13,7 @@ COPY .gitconfig /root/.gitconfig
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 
+RUN apt-get update && apt-get install -qy python-pip groff-base
+RUN pip install awscli
 
 CMD /bin/bash /entrypoint.sh
