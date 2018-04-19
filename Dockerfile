@@ -13,8 +13,5 @@ COPY .gitconfig /root/.gitconfig
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 
-[job-local "job-executed-on-current-host"]
-schedule = @hourly
-command = touch /tmp/example
 
 CMD /bin/bash /entrypoint.sh
