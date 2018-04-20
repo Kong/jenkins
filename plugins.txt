@@ -1,11 +1,9 @@
 blueocean:1.5.0
 blueocean-pipeline-editor:1.5.0
 build-name-setter:1.6.9
-credentials-binding:2.1.16
 embeddable-build-status:1.9
 google-login:1.3.1
 rebuild:1.28
-docker-custom-build-environment-plugin
 workflow-aggregator
 pipeline-stage-view:2.10
 build-pipeline-plugin
