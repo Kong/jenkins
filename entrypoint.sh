@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 aws s3 sync s3://kong-jenkins /var/jenkins_home
 aws s3 sync s3://kong-jenkins-ssh /root/.ssh
 chmod 500 /root/.ssh/id_rsa
