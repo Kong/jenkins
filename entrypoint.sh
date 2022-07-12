@@ -7,4 +7,4 @@ chmod 500 /root/.ssh/id_rsa
 git config --global user.name "Kong - Jenkins"
 git config --global user.email office@konghq.com
 ssh-keyscan -H github.com > /etc/ssh/ssh_known_hosts
-/usr/bin/tini -- /usr/local/bin/jenkins.sh
+/sbin/tini -- /usr/local/bin/jenkins.sh
