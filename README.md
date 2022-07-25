@@ -6,7 +6,7 @@ To update the pinned plugin versions run the following in `/script` of a jenkins
 
 ```
 Jenkins.instance.pluginManager.plugins.each{
-  plugin -> 
+  plugin ->
     println ("${plugin.getShortName()}:${plugin.getVersion()}")
 }
 ```
