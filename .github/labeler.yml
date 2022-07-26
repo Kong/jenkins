@@ -1,0 +1,5 @@
+---
+docs:
+- '**/*.md'
+github_actions:
+- .github/**
