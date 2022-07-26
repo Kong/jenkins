@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:lts-jdk11
+FROM jenkins/jenkins:2.346.2@sha256:da871f844343306a0557363e858036acbe3f5016622eb2c9ff0c8bfd8c0edfcf
 
 USER root
 ENV DEBIAN_FRONTEND noninteractive
