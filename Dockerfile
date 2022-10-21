@@ -15,7 +15,7 @@ COPY entrypoint.sh /entrypoint.sh
 COPY .gitconfig /root/.gitconfig
 
 COPY --chown=jenkins:jenkins plugins.txt /usr/share/jenkins/ref/plugins.txt
-RUN jenkins-plugin-cli -f /usr/share/jenkins/ref/plugins.txt
+RUN jenkins-plugin-cli --verbose -f /usr/share/jenkins/ref/plugins.txt
 
 RUN set -ex; \
     apt-get update -y -qq && \
