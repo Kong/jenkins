@@ -27,7 +27,6 @@ jobs:
       with:
         files: |
           ./docker-bake.hcl
-        targets: build
     - name: Release
       id: release
       uses: ahmadnassri/action-semantic-release@v2
