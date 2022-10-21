@@ -19,8 +19,7 @@ RUN jenkins-plugin-cli --verbose -f /usr/share/jenkins/ref/plugins.txt
 
 RUN set -ex; \
     apt-get update -y -qq && \
-    apt-get install -y -qq \
-        wget unzip && \
+    apt-get install -y -qq wget unzip && \
     cd /tmp && \
     wget -nv "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" && \
     unzip -q awscli-*.zip && \
