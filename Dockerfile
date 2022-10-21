@@ -17,7 +17,13 @@ COPY .gitconfig /root/.gitconfig
 COPY --chown=jenkins:jenkins plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN jenkins-plugin-cli -f /usr/share/jenkins/ref/plugins.txt
 
-RUN apt-get update && apt-get install -qy python3-pip groff-base
-RUN pip install awscli
+RUN set -ex; \
+    apt-get update -y -qq && \
+    apt-get install -y -qq \
+        wget unzip && \
+    cd /tmp && \
+    wget -nv "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" && \
+    unzip -q awscli-*.zip && \
+    ./aws/install && aws --version
 
 CMD /bin/bash /entrypoint.sh
