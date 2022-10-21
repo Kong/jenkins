@@ -7,6 +7,10 @@ ENV INITRD No
 COPY executors.groovy /usr/share/jenkins/ref/init.groovy.d/executors.groovy
 RUN echo 2.0 > /usr/share/jenkins/ref/jenkins.install.UpgradeWizard.state
 
+# set to any string to skip s3 skip in entrypoint.sh
+ARG SKIP_S3
+ENV SKIP_S3=
+
 COPY entrypoint.sh /entrypoint.sh
 COPY .gitconfig /root/.gitconfig
 
