@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.346.2@sha256:da871f844343306a0557363e858036acbe3f5016622eb2c9ff0c8bfd8c0edfcf
+FROM jenkins/jenkins:2.347@sha256:24118114fa3235905fce84748b630e72f4c8bcd2b2881f2bc16199e19ff4ecc7
 
 USER root
 ENV DEBIAN_FRONTEND noninteractive
@@ -11,9 +11,14 @@ COPY entrypoint.sh /entrypoint.sh
 COPY .gitconfig /root/.gitconfig
 
 COPY --chown=jenkins:jenkins plugins.txt /usr/share/jenkins/ref/plugins.txt
-RUN jenkins-plugin-cli -f /usr/share/jenkins/ref/plugins.txt
+RUN jenkins-plugin-cli --verbose -f /usr/share/jenkins/ref/plugins.txt
 
-RUN apt-get update && apt-get install -qy python3-pip groff-base
-RUN pip install awscli
+RUN set -ex; \
+    apt-get update -y -qq && \
+    apt-get install -y -qq wget unzip && \
+    cd /tmp && \
+    wget -nv "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" && \
+    unzip -q awscli-*.zip && \
+    ./aws/install && aws --version
 
 CMD /bin/bash /entrypoint.sh

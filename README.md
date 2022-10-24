@@ -10,3 +10,9 @@ Jenkins.instance.pluginManager.plugins.each{
     println ("${plugin.getShortName()}:${plugin.getVersion()}")
 }
 ```
+
+## Local Builds
+
+```bash
+docker buildx bake --set default.tags=kong/jenkins -f docker-bake.hcl
+```
