@@ -1,15 +1,24 @@
-FROM mashape/jenkins@sha256:c994b42198f880778ee2518c666ab15b0848c80cabba007c1191cbfeb5bbf236
+FROM jenkins/jenkins:2.361.2
 
 USER root
 ENV DEBIAN_FRONTEND noninteractive
 ENV INITRD No
 
+COPY executors.groovy /usr/share/jenkins/ref/init.groovy.d/executors.groovy
+RUN echo 2.0 > /usr/share/jenkins/ref/jenkins.install.UpgradeWizard.state
+
 COPY entrypoint.sh /entrypoint.sh
 COPY .gitconfig /root/.gitconfig
 
-RUN apt-get update && \
-    apt-get install -qy ca-certificates python-pip groff-base && \
-    update-ca-certificates && \
-    pip install awscli
+COPY --chown=jenkins:jenkins plugins.txt /usr/share/jenkins/ref/plugins.txt
+RUN jenkins-plugin-cli --verbose -f /usr/share/jenkins/ref/plugins.txt
+
+RUN set -ex; \
+    apt-get update -y -qq && \
+    apt-get install -y -qq wget unzip && \
+    cd /tmp && \
+    wget -nv "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" && \
+    unzip -q awscli-*.zip && \
+    ./aws/install && aws --version
 
 CMD /bin/bash /entrypoint.sh
