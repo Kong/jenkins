@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.347@sha256:24118114fa3235905fce84748b630e72f4c8bcd2b2881f2bc16199e19ff4ecc7
+FROM jenkins/jenkins:2.361.2
 
 USER root
 ENV DEBIAN_FRONTEND noninteractive
