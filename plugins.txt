@@ -90,7 +90,6 @@ google-login:1.6
 handlebars:3.0.8
 handy-uri-templates-2-api:2.1.8-22.v77d5b_75e6953
 htmlpublisher:1.31
-icon-shim:3.0.0
 ignore-committer-strategy:1.0.4
 instance-identity:116.vf8f487400980
 ionicons-api:31.v4757b_6987003
@@ -103,7 +102,6 @@ javax-mail-api:1.6.2-8
 jaxb:2.3.7-1
 jdk-tool:63.v62d2fd4b_4793
 jenkins-design-language:1.25.8
-jenkins-multijob-plugin:611.v9d3180d752e6
 jersey2-api:2.37-1
 jira:3.8
 jjwt-api:0.11.5-77.v646c772fddb_0
@@ -125,7 +123,6 @@ metrics:4.2.10-389.v93143621b_050
 mina-sshd-api-common:2.9.1-44.v476733c11f82
 mina-sshd-api-core:2.9.1-44.v476733c11f82
 momentjs:1.1.1
-multiple-scms:0.8
 node-iterator-api:49.v58a_8b_35f8363
 okhttp-api:4.9.3-108.v0feda04578cf
 pam-auth:1.10
@@ -136,7 +133,6 @@ pipeline-groovy-lib:613.v9c41a_160233f
 pipeline-input-step:456.vd8a_957db_5b_e9
 pipeline-milestone-step:101.vd572fef9d926
 pipeline-model-api:2.2118.v31fd5b_9944b_5
-pipeline-model-declarative-agent:1.1.1
 pipeline-model-definition:2.2118.v31fd5b_9944b_5
 pipeline-model-extensions:2.2118.v31fd5b_9944b_5
 pipeline-rest-api:2.27
@@ -171,7 +167,6 @@ windows-slaves:1.8.1
 workflow-aggregator:590.v6a_d052e5a_a_b_5
 workflow-api:1200.v8005c684b_a_c6
 workflow-basic-steps:994.vd57e3ca_46d24
-workflow-cps-global-lib:588.v576c103a_ff86
 workflow-cps:3520.va_8fc49e2f96f
 workflow-durable-task-step:1210.va_1e5d77e122b
 workflow-job:1254.v3f64639b_11dd
