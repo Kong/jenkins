@@ -16,3 +16,17 @@ Jenkins.instance.pluginManager.plugins.each{
 ```bash
 docker buildx bake --set default.tags=kong/jenkins -f docker-bake.hcl
 ```
+
+## Generating a new secrets baseline
+
+Install `detect-secrets` at a version that matches our pre-commit github action:
+
+```bash
+pip3 install --upgrade "git+https://github.com/ibm/detect-secrets.git@0.13.1+ibm.50.dss#egg=detect-secrets"
+```
+
+Write a new `.secrets.baseline` file:
+
+```bash
+detect-secrets scan > .secrets.baseline
+```

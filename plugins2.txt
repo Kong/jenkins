@@ -1,0 +1,35 @@
+###
+#
+# these are the minimum plugins required for job configurations we have at
+# time of writing (according to the Plugin Usage plugin)
+#
+# no idea how to test these against our exist jobs without breaking everything
+#
+###
+
+# Blue Ocean Pipeline Editor
+blueocean-pipeline-editor:latest
+# Blue Ocean
+blueocean:latest
+# Folders
+cloudbees-folder:latest
+# Credentials Binding
+credentials-binding:latest
+# Amazon EC2
+ec2:latest
+# Environment Injector
+envinject:latest
+# git
+git:latest
+# GitHub
+github:latest
+# Jira
+jira:latest
+# Plugin Usage
+plugin-usage-plugin:latest
+# Rebuilder
+rebuild:latest
+# Throttle Concurrent Builds
+throttle-concurrents:latest
+# Pipeline
+workflow-aggregator:latest
