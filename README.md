@@ -28,5 +28,5 @@ pip3 install --upgrade "git+https://github.com/ibm/detect-secrets.git@0.13.1+ibm
 Write a new `.secrets.baseline` file:
 
 ```bash
-detect-secrets scan > .secrets.baseline 
+detect-secrets scan > .secrets.baseline
 ```
