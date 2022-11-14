@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.377
+FROM jenkins/jenkins:2.361.4
 
 USER root
 ENV DEBIAN_FRONTEND noninteractive
