@@ -19,7 +19,7 @@ docker buildx bake --set default.tags=kong/jenkins -f docker-bake.hcl
 
 ## Generating a new secrets baseline
 
-Install `detect-secrets` at a version that matches our pre-commit github action:
+Install `detect-secrets` at the version that matches our pre-commit github action:
 
 ```bash
 pip3 install --upgrade "git+https://github.com/ibm/detect-secrets.git@0.13.1+ibm.50.dss#egg=detect-secrets"
