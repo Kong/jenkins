@@ -1,5 +1,4 @@
 ace-editor:1.1
-allure-jenkins:3.27.1
 amazon-ecs:1.41
 ant:481.v7b_09e538fcca
 antisamy-markup-formatter:155.v795fb_8702324
