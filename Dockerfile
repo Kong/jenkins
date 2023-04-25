@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.401
+FROM jenkins/jenkins:2.402
 
 USER root
 ENV DEBIAN_FRONTEND noninteractive
@@ -11,7 +11,9 @@ COPY entrypoint.sh /entrypoint.sh
 COPY .gitconfig /root/.gitconfig
 
 COPY --chown=jenkins:jenkins plugins.txt /usr/share/jenkins/ref/plugins.txt
-RUN jenkins-plugin-cli --verbose -f /usr/share/jenkins/ref/plugins.txt
+RUN set -ex; \
+    jenkins-plugin-cli -f /usr/share/jenkins/ref/plugins.txt && \
+    jenkins-plugin-cli --list
 
 RUN set -ex; \
     apt-get update -y -qq && \
