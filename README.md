@@ -1,3 +1,5 @@
+🚧 This was a repository housing a Dockerfile which was used to create an image Kong's Jenkins instance utilized. With the deprecation/removal of Jenkins KAG-1361, this repo is no longer needed. 🚧
+
 # Jenkins
 
 Dockerfile that add the AWS CLI on to of a jenkins
